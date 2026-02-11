@@ -15,24 +15,57 @@ body{
     color:#111;
 }
 
-/* container มือถือ */
 .container{
     max-width:520px;
     margin:auto;
-    padding:30px 20px;
+    padding:30px 20px 60px;
 }
 
-/* name */
+/* profile */
+.profile{
+    text-align:center;
+}
+
+.profile img{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
 .name{
     font-family:"Playfair Display";
-    font-size:34px;
+    font-size:32px;
     letter-spacing:2px;
 }
 
 .job{
-    color:#888;
-    margin-top:4px;
+    color:#777;
     font-size:15px;
+    margin-top:4px;
+}
+
+/* buttons */
+.buttons{
+    display:flex;
+    gap:10px;
+    margin-top:18px;
+    justify-content:center;
+}
+
+.btn{
+    padding:10px 14px;
+    border-radius:12px;
+    font-size:13px;
+    border:1px solid #ddd;
+    background:#fff;
+}
+
+.btn.primary{
+    background:#111;
+    color:white;
+    border:none;
 }
 
 /* card */
@@ -45,7 +78,6 @@ body{
     box-shadow:0 4px 12px rgba(0,0,0,0.04);
 }
 
-/* title */
 .title{
     font-size:12px;
     letter-spacing:2px;
@@ -53,22 +85,6 @@ body{
     margin-bottom:10px;
 }
 
-/* contact */
-.contact{
-    line-height:1.8;
-    font-size:14px;
-}
-
-/* exp */
-.exp{
-    margin-bottom:12px;
-}
-
-.exp b{
-    font-size:15px;
-}
-
-/* skill tags */
 .skills{
     display:flex;
     flex-wrap:wrap;
@@ -76,13 +92,12 @@ body{
 }
 
 .tag{
-    background:#f5f5f5;
+    background:#f3f3f3;
     padding:6px 10px;
     border-radius:20px;
     font-size:12px;
 }
 
-/* footer */
 .footer{
     text-align:center;
     margin-top:40px;
@@ -96,39 +111,33 @@ body{
 
 <div class="container">
 
+<div class="profile">
+<img src="https://i.imgur.com/yourphoto.jpg">
 <div class="name">DULMANA</div>
 <div class="job">Graphic Designer • IT Support</div>
 
-<div class="card">
-<div class="title">CONTACT</div>
-<div class="contact">
-📞 0842526323<br>
-✉️ doon27400@gmail.com<br>
-📍 Bangkok, Thailand
+<div class="buttons">
+<a href="tel:0808745932" class="btn primary">Call</a>
+<a href="https://line.me/ti/p/xxxxxxxx" class="btn">LINE</a>
+<a href="resume.pdf" class="btn">PDF</a>
 </div>
 </div>
 
 <div class="card">
 <div class="title">PROFILE</div>
 Creative graphic designer and IT support with experience in apparel design,
-printing systems, and web development. Clean modern design style and strong teamwork.
+printing systems, and web development.
 </div>
 
 <div class="card">
 <div class="title">EXPERIENCE</div>
-
-<div class="exp">
 <b>Firma Sport</b><br>
 Graphic Designer / IT Support<br>
-2022-2024
-</div>
+2022-2024<br><br>
 
-<div class="exp">
 <b>Adam Money Service</b><br>
 Web Developer<br>
 2022
-</div>
-
 </div>
 
 <div class="card">
