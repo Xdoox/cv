@@ -3,107 +3,109 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dulmana Resume</title>
+<title>Dulmana</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
+:root{
+--bg:#f5f5f7;
+--card:rgba(255,255,255,0.7);
+--text:#111;
+--sub:#6e6e73;
+}
+
+@media (prefers-color-scheme: dark){
+:root{
+--bg:#000;
+--card:rgba(28,28,30,0.7);
+--text:#fff;
+--sub:#aaa;
+}
+}
+
 body{
-    margin:0;
-    background:#ffffff;
-    font-family:Inter;
-    color:#111;
+margin:0;
+background:var(--bg);
+font-family:-apple-system,BlinkMacSystemFont,Inter;
+color:var(--text);
+-webkit-font-smoothing:antialiased;
 }
 
 .container{
-    max-width:520px;
-    margin:auto;
-    padding:30px 20px 60px;
+max-width:520px;
+margin:auto;
+padding:40px 22px 80px;
 }
 
 /* profile */
-.profile{
-    text-align:center;
-}
-
+.profile{text-align:center;animation:fade 1s;}
 .profile img{
-    width:110px;
-    height:110px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:15px;
+width:120px;height:120px;border-radius:50%;
+object-fit:cover;margin-bottom:16px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
-.name{
-    font-family:"Playfair Display";
-    font-size:32px;
-    letter-spacing:2px;
-}
-
-.job{
-    color:#777;
-    font-size:15px;
-    margin-top:4px;
-}
+.name{font-size:34px;font-weight:600;}
+.job{color:var(--sub);font-size:15px;margin-top:6px;}
 
 /* buttons */
 .buttons{
-    display:flex;
-    gap:10px;
-    margin-top:18px;
-    justify-content:center;
+display:flex;gap:10px;margin-top:22px;justify-content:center;
+flex-wrap:wrap;
 }
 
 .btn{
-    padding:10px 14px;
-    border-radius:12px;
-    font-size:13px;
-    border:1px solid #ddd;
-    background:#fff;
+padding:12px 16px;border-radius:14px;font-size:13px;
+border:1px solid rgba(0,0,0,0.08);
+background:white;color:#111;text-decoration:none;
+transition:.25s;
 }
 
-.btn.primary{
-    background:#111;
-    color:white;
-    border:none;
+@media (prefers-color-scheme: dark){
+.btn{background:#1c1c1e;color:#fff;border:1px solid #333;}
 }
+
+.btn:hover{transform:scale(1.05);}
+.btn.primary{background:#111;color:white;border:none;}
 
 /* card */
 .card{
-    background:#fff;
-    border:1px solid #eee;
-    border-radius:16px;
-    padding:18px;
-    margin-top:18px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.04);
+background:var(--card);
+backdrop-filter:blur(30px);
+border-radius:24px;
+padding:22px;
+margin-top:18px;
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+animation:fade 1s;
 }
 
 .title{
-    font-size:12px;
-    letter-spacing:2px;
-    color:#999;
-    margin-bottom:10px;
+font-size:11px;
+letter-spacing:2px;
+color:var(--sub);
+margin-bottom:12px;
 }
 
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-}
+.skills{display:flex;flex-wrap:wrap;gap:8px;}
 
 .tag{
-    background:#f3f3f3;
-    padding:6px 10px;
-    border-radius:20px;
-    font-size:12px;
+background:rgba(0,0,0,0.06);
+padding:7px 12px;border-radius:20px;font-size:12px;
 }
 
-.footer{
-    text-align:center;
-    margin-top:40px;
-    color:#aaa;
-    font-size:12px;
+@media (prefers-color-scheme: dark){
+.tag{background:rgba(255,255,255,0.1);}
 }
+
+.footer{text-align:center;margin-top:40px;color:var(--sub);font-size:12px;}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(15px);}
+to{opacity:1;}
+}
+
 </style>
 </head>
 
@@ -114,20 +116,21 @@ body{
 <div class="profile">
 <img src="Mr bee 💀.jpg"> 
 <div class="name">DULMANA</div>
-<div class="job">Graphic Designer • IT Support</div>
+<div class="job">IT Support Specialist • Graphic Designer</div>
 
 <div class="buttons">
 <a href="tel:0842526323" class="btn primary">Call</a>
 <a href="https://s.shopee.co.th/7VAr0nl9bK" class="btn">DUMP</a>
 <a href="https://s.shopee.co.th/7VAr0nl9bK" class="btn">FILE</a>
+<a href="#" class="btn">Portfolio</a>
 </div>
 </div>
 
 <div class="card">
 <div class="title">PROFILE</div>
 IT Support Specialist and Graphic Designer with experience in technical support,
-printing systems, and web development. Skilled in troubleshooting hardware and
-software, managing design production, and supporting daily business operations.
+printing systems, and web development. Skilled in troubleshooting hardware,
+software, and supporting business operations.
 </div>
 
 <div class="card">
@@ -138,7 +141,7 @@ IT Technical Support Specialist<br>
 2024 – Present<br><br>
 
 <b>Firma Sport</b><br>
-Graphic design printing Technician<br>
+Graphic Design Printing Technician<br>
 2022 – 2024<br><br>
 
 <b>Adam Money Service Co., Ltd.</b><br>
@@ -154,7 +157,7 @@ Software Programmer<br>
 <div class="tag">Illustrator</div>
 <div class="tag">HTML</div>
 <div class="tag">MySQL</div>
-<div class="tag">Printer System</div>
+<div class="tag">Printer</div>
 <div class="tag">Network</div>
 </div>
 </div>
@@ -166,5 +169,3 @@ Software Programmer<br>
 </div>
 </body>
 </html>
-
-
